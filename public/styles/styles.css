@@ -1,17 +1,62 @@
+body{
+    background: linear-gradient(330deg, #ff8282 30%, #ff5e53 90%);
+    font-family: 'Barlow', sans-serif;
+    height: 1vh;
+    color: white;
+}
+
 .toDoContainer{
     display: grid;
-    grid-template-columns: 500px;
-    grid-template-rows: 50px 50px 50px;
+    max-width: 800px;
+    font-size: 1rem;
+    margin-left: auto;
+    margin-right: auto;
+    grid-template-rows: auto;
+    background-color: transparent;
+    align-items: center;
 }
 
 .toDoRow{
     display: grid;
     grid-template-columns: 1fr 5fr;
+    font-weight: bolder;
+    color: white;
+    font-size: 1.25rem;
 }
 
 .toDoAdd{
+    margin-top:20px;
     display: grid;
     grid-template-columns: 5fr 1fr;
+}
+
+.addItem{
+    font-weight: bold;
+    color: black;
+    font-size: 1;
+    border-radius: 0px;
+}
+
+input::placeholder{
+    color: white;
+    font-size: 0.85rem;
+}
+
+input[type="text"]:focus{
+    border-radius: 0px;
+}
+
+button[type="submit"] {
+    background-color: white;
+    padding: 12px 20px;
+    border: none;
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+button[type="submit"]:hover {
+    color: #ff5e53;
+    font-size: 2rem;
 }
 
 .headerContainer{
@@ -30,6 +75,9 @@
 .headerTitle{
     text-align: center;
     grid-area: 2/1/2/4;
+    font-size: 3rem;
+    margin-top: 20px;
+    margin-bottom: 10px;
 }
 
 .footerContainer{
