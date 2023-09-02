@@ -9,7 +9,8 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static("public"));
 
 app.get("/", (req, res) => {
-    res.render("index.ejs");
+    res.render("index.ejs",
+        {text: newToDos});
   });
 
 app.listen(port, () => {
@@ -28,7 +29,8 @@ var newToDos = [];
   });
 
 app.get("/work", (req, res) => {
-    res.render("work.ejs");
+    res.render("work.ejs",
+        {text: workNewToDos});
 })
 
 var workNewToDos = [];
