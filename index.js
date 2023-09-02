@@ -27,3 +27,6 @@ var newToDos = [];
         {text: newToDos});
   });
 
+app.get("/work", (req, res) => {
+    res.render("work.ejs");
+})
