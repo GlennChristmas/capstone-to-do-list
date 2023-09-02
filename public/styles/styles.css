@@ -31,3 +31,16 @@
     text-align: center;
     grid-area: 2/1/2/4;
 }
+
+.footerContainer{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 100px;
+}
+
+.footerFooter{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
