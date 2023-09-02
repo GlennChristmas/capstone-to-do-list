@@ -10,6 +10,24 @@
 }
 
 .toDoAdd{
-    display:grid;
+    display: grid;
     grid-template-columns: 5fr 1fr;
+}
+
+.headerContainer{
+    display: grid;
+    grid-template-columns: 3fr 1fr 1fr;
+}
+
+.headerDate{
+    text-align: left;
+}
+
+.headerLink{
+    text-align: right;
+}
+
+.headerTitle{
+    text-align: center;
+    grid-area: 2/1/2/4;
 }
