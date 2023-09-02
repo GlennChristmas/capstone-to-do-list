@@ -30,3 +30,13 @@ var newToDos = [];
 app.get("/work", (req, res) => {
     res.render("work.ejs");
 })
+
+var workNewToDos = [];
+app.post("/workSubmit", (req, res) => {
+    const postedWorkText = req.body["postedWorkText"];
+    workNewToDos.push(postedWorkText);
+    console.log(req.body.postedWorkText);
+    console.log(workNewToDos);
+    res.render("work.ejs", 
+        {text: workNewToDos});
+  });
