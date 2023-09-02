@@ -20,10 +20,12 @@
             <p>item 2</p>
         </div>
         <% if(locals.text) { %>
-        <div class="toDoRow">
-            <input type="checkbox">
-            <p><%= locals.text %> </p>
-        </div>
+            <% for (let i=0; i<locals.text.length; i++) { %>
+            <div class="toDoRow">
+                <input type="checkbox">
+                <p><%= locals.text[i] %> </p>
+            </div>
+            <% } %>
         <% } %>
         <form action="/submit" method="POST" class="toDoAdd">
             <input type="text" name="postedText" placeholder="add to do item">

@@ -16,10 +16,14 @@ app.listen(port, () => {
     console.log(`Server running on port ${port}`);
   });
 
+var newToDos = [];
+
   app.post("/submit", (req, res) => {
     const postedText = req.body["postedText"];
+    newToDos.push(postedText);
     console.log(req.body.postedText);
+    console.log(newToDos);
     res.render("index.ejs", 
-        {text: postedText});
+        {text: newToDos});
   });
 
